@@ -50,10 +50,16 @@ const Text = styled.Text`
     color: #ffffff;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 `
+const BottomDivider = styled.View`
+    width: 100%;
+    height: 9px;
+    background: #f0f2f5;   
+`
 
 const Story = () => {
 
     return(
+        <>
         <Container>
             <ScrollView
             horizontal
@@ -129,8 +135,27 @@ const Story = () => {
                     </CardFooter>
                 </Card>
 
+                <Card>
+                    <CardStory
+                        source={require('../assets/story4.jpg')}
+                    />
+                    <CardUser>
+                        <Avatar
+                            source={require('../assets/user7.jpg')}
+                            story={true}
+                        />
+                    </CardUser>
+                    <CardFooter>
+                        <Text>
+                            Palmiye Adam
+                        </Text>
+                    </CardFooter>
+                </Card>
+
             </ScrollView>
         </Container>
+        <BottomDivider/>
+        </>
     )
 
 }

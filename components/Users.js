@@ -16,7 +16,7 @@ const Container = styled.View`
     
 `
 const Room = styled.TouchableOpacity`
-    widht: 115px;
+    width: 115px;
     height: 40px;
     flex-direction: row;
     align-items: center;
@@ -87,6 +87,12 @@ const Users = () => {
                 <User>
                     <Avatar
                         source={require('../assets/user6.jpg')}
+                    />
+                </User>
+                <User>
+                    <Avatar
+                        source={require('../assets/user7.jpg')}
+                        online={true}
                     />
                 </User>
             </ScrollView>
