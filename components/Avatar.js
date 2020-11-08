@@ -12,6 +12,8 @@ const User = styled.Image`
     width: 40px;
     height: 40px;
     border-radius: 20px;
+    border-color: #1777f2;
+    border-width: ${props => (props.story ? "3px" : 0)};
 `
 
 const UserActive = styled.View`
@@ -26,10 +28,10 @@ const UserActive = styled.View`
     border-color: #ffffff;
 `
 
-const Avatar = ({source,online}) => {
+const Avatar = ({source,online,story}) => {
     return(
         <Container>
-            <User source={source}/>
+            <User source={source} story={story}/>
             {online && <UserActive/>}
         </Container>
     )
